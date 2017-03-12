@@ -17,7 +17,7 @@ function draw() {
     for(var i = 0; i < branches.length; i++){
         var b = branches[i];
         push();
-        translate(mouseX, mouseY);
+        translate(windowWidth/2, windowHeight/2);
         rotate(radians(b.startAngle));
         b.branch(b.segments);
         pop();

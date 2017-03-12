@@ -9,10 +9,13 @@ function setup() {
     noStroke();
     frameRate(60);
     colorMode(HSB, 100);
+    background(10);
 }
 
 function draw() {
-    // background(20);
+    if (keyIsPressed === true) {
+        background(10);
+    }
     ellipse(xPos, yPos, 100, 100);
 
     xPos = xPos + xSpeed;
@@ -33,4 +36,12 @@ function draw() {
         ySpeed = ySpeed * -1;
         // fill(random(255),255,random(255));
     }
+}
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    value = 255;
+  } else if (keyCode === RIGHT_ARROW) {
+    value = 0;
+  }
 }
